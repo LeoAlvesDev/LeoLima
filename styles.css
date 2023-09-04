@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+/* INICIO DO MENU */
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  position: fixed;
+  height: 70px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0b110d;
+  z-index: 1000;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+.letrasmenu{
+    color: white;
+}
+.logomenu{
+    height: 100px;
+    width: 100px;
+}
+
+@media (max-width: 600px) {
+    
+  #menu {    
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #0b110d;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  
+}
+
+/* FINAL DO MENU */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;    
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+    background-color: #2c4d56;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about,
+.projects,
+.wppbutton {
+    padding: 0px 0;
+    background-color: #0b110d;
+}
+
+.justified-text {
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+h1,
+h2,
+h3 {
+    color: white;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 100px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* ... (código anterior) ... */
+.project-cards {
+    display: flex;
+    margin-left: -20%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.imgcard{
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px
+    }
+
+    .project-card {
+        flex-basis: 100%;        
+    }
+}
+
+.project-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.project-card.animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+/* ... (código anterior) ... */
+
+.wppbutton {
+    display: flex;
+    color: black;    
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;    
+}
+
+.wpp-button {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;   
+    border-radius: 5px;
+}
+
+.whatsapp-button {
+    position: fixed;    
+}
+
+.whatsapp-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* Estilo para a seção de contato */
+.contact {
+    background-color: #2c4d56;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+    .contact p {
+        font-size: 16px;
+    }
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #0b110d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+}
