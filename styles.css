@@ -33,11 +33,6 @@ a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
-#logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 #header {
   box-sizing: border-box;
   position: fixed;
@@ -74,11 +69,21 @@ a:hover {
     width: 100px;
 }
 
-@media (max-width: 600px) {
-    
-  #menu {        
+@media (max-width: 768px) {
+    #header {       
+        position: fixed;
+        height: 70px;
+        padding: 1rem;
+        width: 100%;        
+        align-items: center;
+        justify-content: space-between;
+        background: #0b110d;
+        z-index: 1000;
+      }
+
+    #menu {    
     display: block;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 70px;
     right: 0px;
@@ -147,16 +152,15 @@ a:hover {
 /* FINAL DO MENU */
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;    
+    font-family: Arial, sans-serif;       
     color: white;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .header {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 180px;
+    padding-bottom: 180px;
     background-color: #2c4d56;
 }
 
@@ -165,17 +169,30 @@ body {
     width: 200px;
     height: 200px;
     display: block;
-    padding-bottom: 10px;
     margin: 0 auto;
+}
+
+.profile-image2 {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding-top: 90px;
-    padding-bottom: 20px;
+    padding-bottom: 90px;
     text-align: center;
-    
 }
 
 .about,
@@ -185,6 +202,12 @@ body {
     background-color: #0b110d;
 }
 
+.projects{
+    padding-top: 50px; 
+    padding-bottom: 90px;   
+    background-color: #2c4d56;        
+    
+}
 .justified-text {
     text-align: justify;
     padding-left: 15px;
@@ -192,12 +215,17 @@ body {
 }
 
 
-h1,
-h2,
-h3 {
-    color: white;
-    
+h1{    
+    color: white;   
 }
+h2{    
+    color: white;    
+}
+h3 {    
+    color: white;
+    font-size: 50px;    
+}
+
 
 @media screen and (max-width: 768px) {
     .header {
@@ -209,8 +237,17 @@ h3 {
         height: 200px;
     }
 
+    .profile-image2 {
+        width: 300px;
+        height: 300px;
+        
+    }
+
     .container {
-        padding: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 80px 0px 80px 0px;
+        text-align: center;
     }
 }
 
@@ -230,10 +267,16 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+    .projects{
+        padding-top: 50px;    
+        background-color: #2c4d56;        
+        
+    }
     .project-cards {
         flex-direction: column;
         align-items: center;
-        margin: 10px
+        padding-top: 0px;
+        margin: 20px;
     }
 
     .project-card {
@@ -242,7 +285,7 @@ h3 {
 }
 
 .project-card {
-    background-color: #444;
+    background-color: #56676e;
     padding: 20px;
     border-radius: 20px;
     opacity: 0;
@@ -286,8 +329,9 @@ h3 {
 
 /* Estilo para a seção de contato */
 .contact {
-    background-color: #2c4d56;
-    padding: 40px;
+    background-color: #0b110d;
+    padding-top: 90px;
+    padding-bottom: 90px;
     text-align: center;
 }
 
@@ -318,7 +362,7 @@ h3 {
 
 /* Estilo para o rodapé */
 .footer {
-    background-color: #0b110d;
+    background-color: #2c4d56;
     color: #fff;
     text-align: center;
     padding: 20px 0;
